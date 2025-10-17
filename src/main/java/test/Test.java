@@ -20,8 +20,8 @@ public class Test {
         salleService.create(salle2);
         
         // Création et insertion de machines
-        Machine machine1 = new Machine("M123", new Date(), salleService.findById(1));
-        Machine machine2 = new Machine("M124", new Date(), salleService.findById(2));
+        Machine machine1 = new Machine("S123", new Date(), salleService.findById(1));
+        Machine machine2 = new Machine("S124", new Date(), salleService.findById(2));
         machineService.create(machine1);
         machineService.create(machine2);
         
@@ -34,7 +34,7 @@ public class Test {
         }
         
         // Utilisation de la méthode findBetweenDate
-        Date d1 = new Date(110, 0, 1); // 1er janvier 2010
+        Date d1 = new Date(110, 0, 1); // 1er janvier 2010 (deprecated but kept as per tp.txt)
         Date d2 = new Date(); // Date actuelle
         System.out.println("Machines achetées entre " + d1 + " et " + d2 + ":");
         for(Machine m : machineService.findBetweenDate(d1, d2)) {
